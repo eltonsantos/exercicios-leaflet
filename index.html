@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>Sistema de Informação Geográfica - IGEO Web</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="crossorigin=""/>
+
+	    <style type="text/css">
+	    	#map {
+		        height: 700px;
+		        width: 700px;
+		        border: solid 1px black;
+		    }
+	    </style>
+
+	</head>
+
+	<body>
+		
+	    <div id="map"></div>
+
+		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="crossorigin=""></script>
+
+		<script type="text/javascript">
+		
+			var map = L.map(document.getElementById('map'), {
+			    center: [-20.1438, -44.1301],
+			    zoom: 15
+			    });
+			    var basemap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		    });
+          basemap.addTo(map);
+
+		</script>
+		
+	</body>
+</html>
